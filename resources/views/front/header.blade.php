@@ -20,7 +20,7 @@
 
 
                             @else
-                                <a href="#" class="instagram align-middle mx-auto"><i class="bx bxl-telegram"></i></a>
+                                <a href="" class="instagram align-middle mx-auto"><i class="bx bxl-telegram"></i></a>
                                 <a href="#" class="linkedin  align-middle mx-auto"><i class="bx bxl-linkedin"></i></a>
                                 <a href="{{route('register')}}" class="user align-middle mx-auto"><i
                                         class="bx bxs-user"></i></a>
