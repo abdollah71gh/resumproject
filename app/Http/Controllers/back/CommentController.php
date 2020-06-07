@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\back;
 
 use App\Article;
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Comment;
 use Illuminate\Http\Request;
@@ -18,7 +19,10 @@ class CommentController extends Controller
     public function index()
     {
         //
+
         $comments = Comment::orderBy('id', 'DESC')->get();
+//        $article_list = Article::with('article')->get();
+//        dd($article_list);
         return view('back.comments.comments', compact('comments'));
     }
 

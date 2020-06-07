@@ -1,3 +1,4 @@
+
 @extends('back.back')
 @section('title')
 پنل مدیریت -- مدیریت  نظرات
@@ -51,9 +52,9 @@
                             <tr>
                                 <td>{!! mb_substr($comment->body,0,50) !!}</td>
                                 <td>{{$comment->name}}</td>
-                                <td>{{dd($comment->article)}}</td>
-                                <td>{!! jdate($comment->created_at)->format('%B -%d- %Y') !!}</td>
-                                <td>{!! $status !!}</td>
+                                <td>{{$comment->article()->pluck('name')}}</td>
+                                <td>{!! jdate($comment->created_at)->format('%d-%B-%Y') !!}</td>
+                                <td>{!!$status!!}</td>
                                 <td>
                                     <a href="{{route('admin.comments.edit',$comment->id)}}" class="badge badge-success">ویرایش</a>
                                     <a href="{{route('admin.comments.destroy',$comment->id)}}>" onclick=" return confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
