@@ -57,7 +57,7 @@
                                 <td>{!! $status !!}</td>
                                 <td>
                                     <a href="{{route('admin.samples.edit',$sample->id)}}" class="badge badge-success">ویرایش</a>
-                                    <a href="{{route('admin.samples.destroy',$sample->id)}}>"  return  onclick="confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
+                                    <a href="{{route('admin.samples.destroy',$sample->id)}}>"    onclick="return confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
                                 </td>
                             </tr>
                             @endforeach

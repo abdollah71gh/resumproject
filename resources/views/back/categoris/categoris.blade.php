@@ -38,7 +38,7 @@
                                 <td>{{$category->slug}}</td>
                                 <td>
                                     <a href="{{route('admin.categoris.edit',$category->id)}}" class="badge badge-success">ویرایش</a>
-                                    <a href="{{route('admin.categoris.destroy',$category->id)}}>"  return  onclick="confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
+                                    <a href="{{route('admin.categoris.destroy',$category->id)}}>" onclick="return confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
                                 </td>
                             </tr>
                             @endforeach

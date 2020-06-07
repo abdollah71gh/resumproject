@@ -51,12 +51,12 @@
                             <tr>
                                 <td>{!! mb_substr($comment->body,0,50) !!}</td>
                                 <td>{{$comment->name}}</td>
-                                <td>{{$comment->article->name}}</td>
+                                <td>{{dd($comment->article)}}</td>
                                 <td>{!! jdate($comment->created_at)->format('%B -%d- %Y') !!}</td>
                                 <td>{!! $status !!}</td>
                                 <td>
                                     <a href="{{route('admin.comments.edit',$comment->id)}}" class="badge badge-success">ویرایش</a>
-                                    <a href="{{route('admin.comments.destroy',$comment->id)}}>"  return  onclick="confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
+                                    <a href="{{route('admin.comments.destroy',$comment->id)}}>" onclick=" return confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
                                 </td>
                             </tr>
                             @endforeach

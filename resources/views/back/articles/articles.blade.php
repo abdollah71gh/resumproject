@@ -63,7 +63,7 @@
                                 <td>{{$article->hit}}</td>
                                 <td>
                                     <a href="{{route('admin.articles.edit',$article->id)}}" class="badge badge-success">ویرایش</a>
-                                    <a href="{{route('admin.articles.destroy',$article->id)}}>"  return  onclick="confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
+                                    <a href="{{route('admin.articles.destroy',$article->id)}}>" onclick="return confirm('ایا میخواهید فایل مورد نظر حذف گردد')" class="badge badge-danger">حذف</a>
                                 </td>
                             </tr>
                             @endforeach
