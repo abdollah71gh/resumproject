@@ -52,7 +52,7 @@
                             <tr>
                                 <td>{!! mb_substr($comment->body,0,50) !!}</td>
                                 <td>{{$comment->name}}</td>
-                                <td>{{$comment->article()->pluck('name')}}</td>
+                                <td>{{$comment->article->name}}</td>
                                 <td>{!! jdate($comment->created_at)->format('%d-%B-%Y') !!}</td>
                                 <td>{!!$status!!}</td>
                                 <td>
